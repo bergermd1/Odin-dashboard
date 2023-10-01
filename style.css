@@ -30,13 +30,25 @@ body {
 .side-bar {
     grid-area: 1 / 1 / 3 / 2;
     display: grid;
-    grid-template-rows: 100px 1fr 1fr;
+    grid-template-rows: 100px 300px 150px;
     background-color: rgb(25,146,212);
     color: white;
     font-size: 1.5em;
     font-weight: bold;
     padding-left: 20px;
     /* justify-items: center; */
+}
+
+.logo {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    justify-items: start;
+    align-items: center;
+}
+
+.logo > img {
+    height: 40px;
+    width: 40px;
 }
 
 .menu1 {
@@ -57,12 +69,15 @@ body {
     grid-area: 1 / 2 / 2 / 3;
     display: grid;
     grid-template-rows: 1fr 1fr;
+    z-index: 3;
+    box-shadow: 0 3px 2px rgb(192, 192, 192);
 }
 
 .header-top {
     display: grid;
-    grid-template-columns: 60px 1fr 80px 80px 80px;
+    grid-template-columns: 60px 1fr 80px 80px 180px;
     align-items: center;
+    margin-left: 50px;
 }
 
 .header-top > input {
@@ -73,15 +88,21 @@ body {
     border-style: none;
 }
 
+.header-top > p {
+    font-weight: bold;
+}
+
 .header-bottom {
     display: grid;
     grid-template-columns: 60px 1fr 160px 160px 160px;
+    align-items: center;
     /* justify-items: center; */
     /* gap: 50px; */
     /* border-bottom: thin solid; */
     /* box-shadow: 0 3px 5px rgb(95, 95, 95); */
-    box-shadow: 0 13px 5px rgb(95, 95, 95);
-
+    /* border: solid; */
+    margin-left: 50px;
+    /* margin-bottom: 5px; */
 }
 
 .greeting>p:nth-child(1) {
@@ -127,6 +148,8 @@ button {
     font-size: 1.5em;
     font-weight: bold;
     align-self: end;
+    /* margin-top: 40px; */
+    /* padding-bottom: 20px; */
 }
 
 /* .project-panel {
@@ -140,7 +163,9 @@ button {
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     /* grid-template-columns: repeat(3, 400px); */
     justify-items: start;
-    align-items: center;
+    align-items: start;
+    gap: 20px;
+    padding-top: 20px;
     /* min-height: 0; */
     /* overflow-y: scroll; */
 }
@@ -153,7 +178,7 @@ button {
 
 .announcements-panel, .trending-panel {
     padding: 10px;
-    margin: 30px;
+    margin: 20px;
 }
 
 .project-card {
@@ -213,7 +238,7 @@ button {
 .news-panel {
     grid-area: 2 / 2 / 3 / 3;
     display: grid;
-    grid-template-rows: 1fr 25px 1fr;
+    grid-template-rows: 500px 25px 400px;
 }
 
 .announcements-panel {
@@ -245,7 +270,10 @@ button {
 }
 
 .topic {
-    /* border: thin solid; */
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    align-items: center;
 }
 
 img {
